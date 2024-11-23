@@ -15,9 +15,9 @@ namespace CSharp13
             return counter;
         }
 
-        public static async void Run()
+        public static void Run()
         {
-            Parallel.Invoke(()=> 
+            Parallel.Invoke(() =>
             {
                 foreach (int i in Enumerable.Range(1, 10000))
                 {
@@ -33,7 +33,7 @@ namespace CSharp13
                 }
             });
 
-            Console.WriteLine($"Counter ={ counter}");  
+            Console.WriteLine($"Counter ={counter}");
         }
 
     }
